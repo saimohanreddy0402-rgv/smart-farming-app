@@ -40,7 +40,7 @@ if st.button("Predict Yield"):
     st.success(f" Predicted Yield: {prediction[0]:.2f} tons/hectare")
 
     # Recommendations
-st.subheader(" Smart Recommendations")
+st.subheader(" Recommendations")
 
 # Irrigation
 if rainfall < 400:
