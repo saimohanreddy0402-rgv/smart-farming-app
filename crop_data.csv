@@ -1,0 +1,7 @@
+soil,rainfall,temperature,crop,yield
+loamy,800,25,rice,3.5
+sandy,400,30,wheat,2.0
+clay,600,28,maize,2.8
+loamy,700,26,rice,3.2
+clay,500,27,wheat,2.3
+sandy,300,32,maize,1.8
