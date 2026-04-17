@@ -40,16 +40,26 @@ if st.button("Predict Yield"):
     st.success(f" Predicted Yield: {prediction[0]:.2f} tons/hectare")
 
     # Recommendations
-    st.subheader(" Recommendations")
+st.subheader("📌 Smart Recommendations")
 
-    if rainfall < 500:
-        st.write("Increase irrigation")
-    else:
-        st.write("Irrigation level is good")
+# Irrigation
+if rainfall < 400:
+    st.warning("💧 Increase irrigation frequency to improve yield")
+elif rainfall > 800:
+    st.warning("⚠ Reduce irrigation and improve drainage to avoid waterlogging")
+else:
+    st.info("💧 Maintain current irrigation schedule")
 
-    if soil == "sandy":
-        st.write("Use organic fertilizers")
-    elif soil == "clay":
-        st.write("⚠ Improve drainage system")
-    else:
-        st.write("Soil condition is balanced")
+# Soil-based recommendation
+if soil == "sandy":
+    st.warning("🌱 Add organic compost to improve water retention")
+elif soil == "clay":
+    st.warning("⚠ Improve soil drainage and avoid overwatering")
+elif soil == "loamy":
+    st.success("🌿 Use balanced fertilizers (NPK) for better yield")
+
+# Temperature
+if temperature > 35:
+    st.warning("🌡 Use shade nets or irrigation to reduce heat stress")
+elif temperature < 20:
+    st.warning("❄ Crop growth may slow - consider protective measures")
